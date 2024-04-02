@@ -12,7 +12,7 @@ html {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
@@ -122,7 +122,8 @@ ol {
 .search-form__textfield {
   background: transparent;
   font-family: inherit;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
   border: none;
   border-block-start: 1px solid currentColor;
   border-block-end: 1px solid currentColor;
@@ -135,12 +136,8 @@ ol {
 }
 
 .search-form__textfield:active {
-  outline: 1px solid;
+  outline: 1px solid rgb(255, 255, 255);
   border: none;
-}
-
-.search-form__textfield {
-  font-size: 18px;
 }
 
 .search-form__label-text {
@@ -167,15 +164,20 @@ ol {
   content: "";
   inline-size: 15px;
   block-size: 15px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 .button {
   height: 34px;
   background: transparent;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   cursor: pointer;
+  font-family: "Fira Sans Condensed";
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  appearance: none;
 }
 
 .button:hover {
@@ -183,11 +185,16 @@ ol {
 }
 
 .button:active {
-  background-color: #545050;
+  background-color: rgba(84, 80, 80);
 }
 
 .button:focus {
   outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid rgb(255, 255, 255);
+  outline-offset: 1px;
 }
 
 .search-form__submit-button {
@@ -207,11 +214,11 @@ ol {
   font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 94%;
+  line-height: 0.9;
 }
 
 .content__accent {
-  color: #545050;
+  color: rgba(84, 80, 80);
 }
 
 .content__list {
@@ -223,7 +230,6 @@ ol {
 
 .content__list-item {
   width: 394px;
-  position: relative;
   margin: 0 0 30px 0;
 }
 
@@ -233,7 +239,7 @@ ol {
 
 .content__card-link {
   display: block;
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   margin: 2px;
 }
@@ -247,7 +253,7 @@ ol {
 }
 
 .content__card-link:active {
-  background-color: #545050;
+  background-color: rgba(84, 80, 80);
 }
 
 .content__card-link:focus-visible {
@@ -255,7 +261,7 @@ ol {
 }
 
 .content__card-link_current {
-  background-color: #545050;
+  background-color: rgba(84, 80, 80);
 }
 
 .content__video-card {
@@ -274,10 +280,18 @@ ol {
   line-height: 100%;
   font-weight: 700;
   margin-block-end: 6px;
+  max-inline-size: 196px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
-  line-height: 16.2px;
+  line-height: 1.2;
+  max-inline-size: 196px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
