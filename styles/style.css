@@ -40,6 +40,16 @@ ol {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .content {
   display: flex;
   gap: 30px;
@@ -109,16 +119,6 @@ ol {
   outline-offset: 2px;
 }
 
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-}
-
 .search-form__textfield {
   background: transparent;
   font-family: inherit;
@@ -137,6 +137,10 @@ ol {
 .search-form__textfield:active {
   outline: 1px solid;
   border: none;
+}
+
+.search-form__textfield {
+  font-size: 18px;
 }
 
 .search-form__label-text {
@@ -214,6 +218,7 @@ ol {
   position: relative;
   height: 298px;
   overflow: auto;
+  z-index: 0;
 }
 
 .content__list-item {
@@ -263,7 +268,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   text-transform: uppercase;
   line-height: 100%;
